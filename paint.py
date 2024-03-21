@@ -27,19 +27,41 @@ def draw_circle(start, end):
     up()
     goto(start.x, start.y)
     down()
-    radius = math.sqrt((end.x - start.x) * 2 + (end.y - start.y) * 2)
+    radius = math.sqrt((end.x - start.x) ** 2 + (end.y - start.y) ** 2)
     circle(radius)
 
+
 def rectangle(start, end):
-    "Draw rectangle from start to end."
-    pass  #TODO
+    """Draw rectangle from start to end."""
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for _ in range(2):
+        forward(end.x - start.x)
+        left(90)
+        forward(end.y - start.y)
+        left(90)
+
+    end_fill()
 
 def triangle(start, end):
-    "Draw triangle from start to end."
-    pass  #TODO
+    """Draw triangle from start to end."""
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for _ in range(3):
+        goto(end.x, end.y)
+        goto(start.x, end.y)
+        goto(start.x + (end.x - start.x) / 2, start.y + (end.y - start.y))
+
+    end_fill()
 
 def tap(x, y):
-    "Store starting point or draw shape."
+    """Store starting point or draw shape."""
     start = state['start']
 
     if start is None:
@@ -51,14 +73,9 @@ def tap(x, y):
         state['start'] = None
 
 def store(key, value):
-    "Store value in state at key."
+    """Store value in state at key."""
     state[key] = value
 
-state = {'start': None, 'shape': line}
-setup(420, 420, 370, 0)
-onscreenclick(tap)
-listen()
-onkey(undo, 'u')
 # Define a function to change color to purple
 def set_purple():
     color('purple')
