@@ -4,16 +4,16 @@ Este script de Python proporciona un programa de pintura simple utilizando el m�
 
 ## Funcionalidades Agregadas:
 
-    1 Nueva Opción de Color:
+    1. Nueva Opción de Color:
         Se agregó la funcionalidad para cambiar el color de dibujo a morado al presionar la tecla 'P'.
 
-    2 Dibujo de Círculos:
+    2. Dibujo de Círculos:
         Se implementó una función para dibujar círculos. Los usuarios pueden dibujar círculos seleccionando la tecla 'c'.
 
-    3 Dibujo de Rectángulos:
+    3. Dibujo de Rectángulos:
         Se agregó la funcionalidad para dibujar rectángulos. Los usuarios pueden dibujar rectángulos seleccionando la tecla 'r'.
 
-    4 Dibujo de Triángulos:
+    4. Dibujo de Triángulos:
         Se implementó una función para dibujar triángulos. Los usuarios pueden dibujar triángulos seleccionando la tecla 't'.
 
 ## Instrucciones de Uso:
